@@ -101,7 +101,7 @@ namespace AutomobileApp.DAL
             return result;
         }
 
-        public static List<T> GetList<T>(string sql, Dictionary<string, object> parameters, Func<SqlDataReader, T> builder)
+        public static IList<T> GetList<T>(string sql, Dictionary<string, object> parameters, Func<SqlDataReader, T> builder)
         {
             var result = new List<T>();
             Using(conn =>
